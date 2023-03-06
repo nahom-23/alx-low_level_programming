@@ -1,23 +1,23 @@
 #include "main.h"
-
 /**
- * print_most_numbers -  checks for checks for a digit (0 through 9).
- *
- * Return: Always 0.
+ * _strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
-void print_most_numbers(void)
+char *_strpbrk(char *s, char *accept)
 {
-	int c;
+	int k;
 
-	for (c = 48; c < 58; c++)
+	while (*s)
 	{
-		if (c != 50)
+		for (k = 0; accept[k]; k++)
 		{
-			if (c != 52)
-			{
-				_putchar(c);
-			}
+		if (*s == accept[k])
+		return (s);
 		}
+	s++;
 	}
-	_putchar('\n');
+
+return ('\0');
 }
